@@ -34,7 +34,7 @@ export function Career() {
   const nextTournament = Math.ceil(game.season / TOURNAMENT_EVERY) * TOURNAMENT_EVERY;
 
   return (
-    <div className="grid" style={{ gridTemplateColumns: 'minmax(260px, 320px) 1fr' }}>
+    <div className="grid career-grid" style={{ gridTemplateColumns: 'minmax(260px, 320px) 1fr' }}>
       <div className="stack">
         <Panel title={me.name} right={`Age ${me.age}`}>
           <dl className="kv">

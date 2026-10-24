@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { clubOf, humanOf, WEEKS } from '../../engine/game';
 import type { MatchReport, ReportRow } from '../../engine/match/report';
 import { POS_BY_ID } from '../../engine/positions';
@@ -7,6 +7,7 @@ import { useStore } from '../../state/store';
 import { Kit, Panel } from '../components';
 
 import { ratingBand } from '../ratingBand';
+import { useMobile } from '../useMobile';
 const Rating = ({ r }: { r: number }) => <span className={`ovr ${ratingBand(r)}`}>{r.toFixed(1)}</span>;
 
 function RatingsTable({ rows, title }: { rows: ReportRow[]; title: string }) {
@@ -136,7 +137,10 @@ export function Schedule() {
   const me = humanOf(game);
   const club = clubOf(game, me.clubId)!;
   const [sel, setSel] = useState<number | null>(null);
-  const shown = sel ?? game.reports[0]?.week ?? null;
+  const mobile = useMobile();
+  const nextRow = useRef<HTMLTableRowElement | null>(null);
+  useEffect(() => { if (mobile && sel === null) nextRow.current?.scrollIntoView({ block: 'center' }); }, [mobile, sel]);
+  const shown = sel ?? (mobile ? null : game.reports[0]?.week ?? null);
   const rep = game.reports.find(r => r.week === shown && r.season === game.season) ?? null;
 
   const rows = Array.from({ length: WEEKS }, (_, i) => {
@@ -148,16 +152,27 @@ export function Schedule() {
     return { week: i + 1, home, opp, gf, ga, res };
   });
 
+  // On a phone the list and the report are two pages: pick a match, read it, go back.
+  if (mobile && sel !== null) {
+    return (
+      <div className="stack">
+        <button className="btn" onClick={() => setSel(null)}>‹ All fixtures</button>
+        {rep ? <Report rep={rep} /> : <Panel title="Match report"><p className="muted">Only the last eight match reports are kept.</p></Panel>}
+      </div>
+    );
+  }
+  const upcoming = rows.find(r => !r.res)?.week;
+
   return (
     <div className="grid" style={{ gridTemplateColumns: 'minmax(18rem, 19rem) minmax(0, 1fr)' }}>
       <Panel title="Fixtures and results" right={`Season ${game.season}`} flush>
-        <div style={{ maxHeight: 'calc(100vh - 8rem)', overflow: 'auto' }}>
+        <div style={mobile ? undefined : { maxHeight: 'calc(100vh - 8rem)', overflow: 'auto' }}>
           <table className="fixtures">
             <colgroup><col style={{ width: '2.6rem' }} /><col /><col style={{ width: '2.6rem' }} /><col style={{ width: '5.2rem' }} /></colgroup>
             <thead><tr><th>MD</th><th className="l">Opponent</th><th>H/A</th><th>Result</th></tr></thead>
             <tbody>
               {rows.map(r => (
-                <tr key={r.week} className={'click' + (r.week === shown ? ' me' : '')} onClick={() => setSel(r.week)}>
+                <tr key={r.week} ref={r.week === upcoming ? nextRow : undefined} className={'click' + (r.week === shown ? ' me' : '') + (mobile && r.week === upcoming ? ' next-fx' : '')} onClick={() => { if (!mobile || r.res) setSel(r.week); }}>
                   <td>{r.week}</td>
                   <td className="l" title={r.opp.name}><Kit club={r.opp} /> {r.opp.name}</td>
                   <td>{r.home ? 'H' : 'A'}</td>
@@ -168,7 +183,7 @@ export function Schedule() {
           </table>
         </div>
       </Panel>
-      {rep ? <Report rep={rep} /> : <Panel title="Match report"><p className="muted">{shown ? 'Only the last eight match reports are kept.' : 'No matches played yet. Press Continue to play matchday 1.'}</p></Panel>}
+      {!mobile && (rep ? <Report rep={rep} /> : <Panel title="Match report"><p className="muted">{shown ? 'Only the last eight match reports are kept.' : 'No matches played yet. Press Continue to play matchday 1.'}</p></Panel>)}
     </div>
   );
 }

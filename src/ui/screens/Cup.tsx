@@ -4,11 +4,25 @@ import { CUP_NAME } from '../../engine/career';
 import type { CupTie } from '../../engine/career';
 import { useStore } from '../../state/store';
 import { ClubLink, Kit, Panel } from '../components';
+import { useMobile } from '../useMobile';
 
 function Tie({ tie, mine, game }: { tie: CupTie; mine: boolean; game: ReturnType<typeof useStore.getState>['game'] & object }) {
   const h = clubOf(game, tie.h)!, a = clubOf(game, tie.a)!;
   const done = tie.winner !== null;
+  const mobile = useMobile();
   const cell = (c: typeof h, won: boolean) => <span style={{ display: 'inline-flex', gap: 6, alignItems: 'center', fontWeight: done && won ? 700 : 400, color: done && !won ? 'var(--muted)' : undefined }}><Kit club={c} /><ClubLink id={c.id}>{c.name}</ClubLink></span>;
+  if (mobile) {
+    const note = tie.pens ? `${tie.winner === tie.h ? h.short : a.short} won ${Math.max(...tie.pens)}-${Math.min(...tie.pens)} on penalties` : tie.neutral ? 'Neutral ground' : '';
+    return (
+      <tr className={mine ? 'me' : ''}>
+        <td colSpan={4} className="l" style={{ whiteSpace: 'normal' }}>
+          <div className="tie-row">{cell(h, tie.winner === tie.h)}<b className="num">{done ? tie.hg : ''}</b></div>
+          <div className="tie-row">{cell(a, tie.winner === tie.a)}<b className="num">{done ? tie.ag : ''}</b></div>
+          {note && <div className="note" style={{ marginTop: 2 }}>{note}</div>}
+        </td>
+      </tr>
+    );
+  }
   return (
     <tr className={mine ? 'me' : ''}>
       <td className="l">{cell(h, tie.winner === tie.h)}</td>
@@ -20,6 +34,7 @@ function Tie({ tie, mine, game }: { tie: CupTie; mine: boolean; game: ReturnType
 }
 
 export function Cup() {
+  const mobile = useMobile();
   const game = useStore(s => s.game)!;
   const watch = useStore(s => s.watchReport);
   const cup = game.cup;
@@ -61,7 +76,7 @@ export function Cup() {
         {round.ties.length === 0 ? (
           <div className="pb"><p className="muted">The draw is made once the previous round is finished.</p></div>
         ) : (
-          <div style={{ maxHeight: 'calc(100vh - 9rem)', overflow: 'auto' }}>
+          <div style={mobile ? undefined : { maxHeight: 'calc(100vh - 9rem)', overflow: 'auto' }}>
             {round.byes.length > 0 && <p className="note" style={{ padding: '8px 12px' }}>{round.byes.length} clubs have a bye to the next round.</p>}
             <table>
               <tbody>

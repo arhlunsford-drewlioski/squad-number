@@ -184,7 +184,7 @@ export function Training() {
           {GROUPS.filter(g => g.id !== 'goalkeeping' || isGK).map(g => (
             <Panel key={g.id} title={g.label} flush>
               <table>
-                <thead><tr><th className="l">Attribute</th><th>Now</th><th>This season</th><th className="l">Note</th></tr></thead>
+                <thead><tr><th className="l">Attribute</th><th>Now</th><th>This season</th><th className="l hide-m">Note</th></tr></thead>
                 <tbody>
                   {attrsIn(g.id).map(a => {
                     const d = me.attrs[a.id] - game.seasonStart.attrs[a.id];
@@ -192,10 +192,10 @@ export function Training() {
                     const next = me.attrs[a.id] - Math.floor(me.attrs[a.id]);
                     return (
                       <tr key={a.id}>
-                        <td className="l">{a.label}</td>
+                        <td className="l">{a.label}{(() => { const note = room < 0.6 ? 'Near your limit' : projMap.has(a.id) && next > 0.7 ? 'Close to improving' : ''; return note ? <div className="note show-m">{note}</div> : null; })()}</td>
                         <td><AttrNum v={me.attrs[a.id]} /> <span className="muted num" style={{ fontSize: '0.85em' }}>{me.attrs[a.id].toFixed(1)}</span></td>
                         <td className="num" style={{ color: d > 0.05 ? 'var(--good)' : d < -0.05 ? 'var(--bad)' : undefined }}>{Math.abs(d) < 0.05 ? '-' : f2(d)}</td>
-                        <td className="l muted">{room < 0.6 ? 'Near your limit' : projMap.has(a.id) && next > 0.7 ? 'Close to improving' : ''}</td>
+                        <td className="l muted hide-m">{room < 0.6 ? 'Near your limit' : projMap.has(a.id) && next > 0.7 ? 'Close to improving' : ''}</td>
                       </tr>
                     );
                   })}

@@ -7,6 +7,7 @@ import { DIVISIONS } from '../../engine/world';
 import { useStore } from '../../state/store';
 import { Kit, Ovr, Panel, PlayerLink } from '../components';
 import { useSort } from '../useSort';
+import { useMobile } from '../useMobile';
 
 export function ClubScreen() {
   const game = useStore(s => s.game)!;
@@ -20,6 +21,7 @@ export function ClubScreen() {
   const income = weeklyIncome(game, club.id), bill = wageBill(game, club.id);
   const squad = game.players.filter(p => p.clubId === club.id).sort((a, b) => b.wage - a.wage);
   const wageSort = useSort(squad, { pos: p => POS_BY_ID[p.position].label, name: p => p.name, age: p => p.age, ovr: p => ovrOf(p), wage: p => p.wage, years: p => p.contractYears, value: p => (p.human ? 0 : marketValue(p)) }, 'wage');
+  const mobile = useMobile();
   const m = club.mgr;
   const tenure = game.season === m.since ? Math.max(0, game.week - m.week) : (game.season - m.since) * 38 + game.week - m.week;
   const rich = club.wealth >= 1.15 ? 'Wealthy' : club.wealth >= 0.95 ? 'Comfortable' : 'Tight';
@@ -58,6 +60,20 @@ export function ClubScreen() {
         </Panel>
       </div>
       <Panel title="Wages and contracts" right={`${fmtMoney(bill)} a week`} flush>
+        {mobile ? (
+          <div className="cards">
+            {wageSort.rows.map(p => (
+              <button key={p.id} className={'card-row' + (p.human ? ' me' : '')} onClick={() => select(p.id)}>
+                <span className="pos-chip">{POS_BY_ID[p.position].label}</span>
+                <span className="card-main">
+                  <b>{p.name}{p.loanFrom ? ' (loan)' : ''}</b>
+                  <span className="muted" style={p.contractYears <= 1 ? { color: 'var(--warn)' } : undefined}>{p.age} · {p.contractYears} season{p.contractYears === 1 ? '' : 's'} left{p.human ? '' : ` · worth ${fmtMoney(marketValue(p))}`}</span>
+                </span>
+                <span className="card-end"><Ovr v={ovrOf(p)} /><span className="muted">{fmtMoney(p.wage)}/wk</span></span>
+              </button>
+            ))}
+          </div>
+        ) : (
         <table>
           <thead><tr>{wageSort.th('pos', 'Pos', true)}{wageSort.th('name', 'Player', true)}{wageSort.th('age', 'Age')}{wageSort.th('ovr', 'OVR')}{wageSort.th('wage', 'Wage')}{wageSort.th('years', 'Contract')}{wageSort.th('value', 'Value')}</tr></thead>
           <tbody>
@@ -73,6 +89,7 @@ export function ClubScreen() {
             ))}
           </tbody>
         </table>
+        )}
       </Panel>
     </div>
   );

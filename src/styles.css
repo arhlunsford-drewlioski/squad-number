@@ -389,3 +389,24 @@ th { font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; font-s
 
 .update-banner { position: fixed; top: max(0.5rem, env(safe-area-inset-top)); left: 0.6rem; right: 0.6rem; z-index: 100; display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; background: var(--accent); color: var(--accent-ink); border-radius: 0.5rem; padding: 0.5rem 0.8rem; font-weight: 600; box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.4); max-width: 28rem; margin: 0 auto; }
 .update-banner .btn { background: var(--accent-ink); color: var(--accent); border-color: var(--accent-ink); }
+
+/* Phone fixtures: bigger rows, and the next match marked */
+@media (max-width: 48rem) {
+  table.fixtures td { height: 3rem; font-size: 1.05rem; }
+  tr.next-fx td { background: var(--accent-soft); }
+  tr.next-fx td:first-child { box-shadow: inset 4px 0 0 var(--accent); }
+}
+
+/* Phone tabs scroll sideways instead of clipping; the career tabs come before the summary */
+@media (max-width: 48rem) {
+  .tabs { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tabs button { flex: none; white-space: nowrap; }
+  .career-grid { display: flex !important; flex-direction: column; align-items: stretch !important; gap: 0.9rem; }
+  .career-grid > :first-child { order: 2; }
+  .panel > .ph { flex-wrap: wrap; }
+}
+
+/* Phone cup ties: two lines, one per club, the score at the right */
+.tie-row { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; padding: 0.2rem 0; font-size: 1.05rem; }
+
+@media (max-width: 48rem) { .show-m.note { display: block !important; font-size: 0.8rem; } }
