@@ -1,0 +1,193 @@
+[
+ {
+  "id": "GK",
+  "label": "GK",
+  "long": "Goalkeeper",
+  "height": [
+   185,
+   200
+  ],
+  "weights": {
+   "composure": 0.055556,
+   "decisions": 0.055556,
+   "positioning": 0.083333,
+   "anticipation": 0.055556,
+   "concentration": 0.083333,
+   "agility": 0.055556,
+   "jumping": 0.027778,
+   "handling": 0.138889,
+   "reflexes": 0.138889,
+   "aerialReach": 0.083333,
+   "commandOfArea": 0.083333,
+   "kicking": 0.055556,
+   "oneOnOnes": 0.083333
+  }
+ },
+ {
+  "id": "CB",
+  "label": "CB",
+  "long": "Centre Back",
+  "height": [
+   182,
+   198
+  ],
+  "weights": {
+   "passing": 0.025974,
+   "heading": 0.103896,
+   "tackling": 0.12987,
+   "marking": 0.12987,
+   "composure": 0.051948,
+   "decisions": 0.051948,
+   "positioning": 0.12987,
+   "anticipation": 0.077922,
+   "aggression": 0.038961,
+   "concentration": 0.051948,
+   "pace": 0.051948,
+   "strength": 0.077922,
+   "jumping": 0.077922
+  }
+ },
+ {
+  "id": "FB",
+  "label": "FB",
+  "long": "Full Back",
+  "height": [
+   168,
+   184
+  ],
+  "weights": {
+   "passing": 0.050847,
+   "dribbling": 0.050847,
+   "crossing": 0.084746,
+   "tackling": 0.118644,
+   "marking": 0.101695,
+   "positioning": 0.101695,
+   "anticipation": 0.067797,
+   "workRate": 0.084746,
+   "pace": 0.118644,
+   "acceleration": 0.084746,
+   "stamina": 0.101695,
+   "agility": 0.033898
+  }
+ },
+ {
+  "id": "DM",
+  "label": "DM",
+  "long": "Defensive Midfielder",
+  "height": [
+   175,
+   190
+  ],
+  "weights": {
+   "passing": 0.085714,
+   "firstTouch": 0.042857,
+   "tackling": 0.114286,
+   "marking": 0.071429,
+   "composure": 0.057143,
+   "decisions": 0.085714,
+   "positioning": 0.114286,
+   "anticipation": 0.1,
+   "workRate": 0.085714,
+   "aggression": 0.042857,
+   "concentration": 0.057143,
+   "stamina": 0.085714,
+   "strength": 0.057143
+  }
+ },
+ {
+  "id": "CM",
+  "label": "CM",
+  "long": "Central Midfielder",
+  "height": [
+   170,
+   188
+  ],
+  "weights": {
+   "longShots": 0.043478,
+   "passing": 0.144928,
+   "firstTouch": 0.086957,
+   "dribbling": 0.043478,
+   "tackling": 0.057971,
+   "technique": 0.072464,
+   "composure": 0.072464,
+   "vision": 0.101449,
+   "decisions": 0.101449,
+   "positioning": 0.043478,
+   "offTheBall": 0.057971,
+   "workRate": 0.086957,
+   "stamina": 0.086957
+  }
+ },
+ {
+  "id": "AM",
+  "label": "AM",
+  "long": "Attacking Midfielder",
+  "height": [
+   166,
+   184
+  ],
+  "weights": {
+   "finishing": 0.057971,
+   "longShots": 0.057971,
+   "passing": 0.115942,
+   "firstTouch": 0.101449,
+   "dribbling": 0.101449,
+   "technique": 0.101449,
+   "composure": 0.086957,
+   "vision": 0.115942,
+   "decisions": 0.086957,
+   "offTheBall": 0.086957,
+   "acceleration": 0.043478,
+   "agility": 0.043478
+  }
+ },
+ {
+  "id": "W",
+  "label": "W",
+  "long": "Winger",
+  "height": [
+   165,
+   182
+  ],
+  "weights": {
+   "finishing": 0.044776,
+   "passing": 0.044776,
+   "firstTouch": 0.074627,
+   "dribbling": 0.119403,
+   "crossing": 0.089552,
+   "technique": 0.074627,
+   "offTheBall": 0.074627,
+   "workRate": 0.044776,
+   "pace": 0.119403,
+   "acceleration": 0.119403,
+   "stamina": 0.059701,
+   "agility": 0.089552,
+   "balance": 0.044776
+  }
+ },
+ {
+  "id": "ST",
+  "label": "ST",
+  "long": "Striker",
+  "height": [
+   172,
+   196
+  ],
+  "weights": {
+   "finishing": 0.171429,
+   "firstTouch": 0.071429,
+   "dribbling": 0.057143,
+   "heading": 0.071429,
+   "technique": 0.042857,
+   "composure": 0.1,
+   "decisions": 0.042857,
+   "offTheBall": 0.114286,
+   "anticipation": 0.057143,
+   "pace": 0.085714,
+   "acceleration": 0.071429,
+   "strength": 0.057143,
+   "balance": 0.028571,
+   "jumping": 0.028571
+  }
+ }
+]

@@ -1,0 +1,407 @@
+{
+ "programmes": [
+  {
+   "id": "finishing",
+   "label": "Finishing",
+   "blurb": "Shooting drills under pressure.",
+   "trains": [
+    {
+     "id": "finishing",
+     "w": 1
+    },
+    {
+     "id": "composure",
+     "w": 0.6
+    },
+    {
+     "id": "offTheBall",
+     "w": 0.4
+    }
+   ]
+  },
+  {
+   "id": "longRange",
+   "label": "Long range",
+   "blurb": "Shooting from distance and striking the ball cleanly.",
+   "trains": [
+    {
+     "id": "longShots",
+     "w": 1
+    },
+    {
+     "id": "technique",
+     "w": 0.6
+    },
+    {
+     "id": "strength",
+     "w": 0.4
+    }
+   ]
+  },
+  {
+   "id": "ballMastery",
+   "label": "Ball mastery",
+   "blurb": "Close control and running with the ball.",
+   "trains": [
+    {
+     "id": "firstTouch",
+     "w": 1
+    },
+    {
+     "id": "dribbling",
+     "w": 0.6
+    },
+    {
+     "id": "technique",
+     "w": 0.4
+    }
+   ]
+  },
+  {
+   "id": "passing",
+   "label": "Passing patterns",
+   "blurb": "Playing through the thirds and finding the pass.",
+   "trains": [
+    {
+     "id": "passing",
+     "w": 1
+    },
+    {
+     "id": "vision",
+     "w": 0.6
+    },
+    {
+     "id": "decisions",
+     "w": 0.4
+    }
+   ]
+  },
+  {
+   "id": "delivery",
+   "label": "Delivery",
+   "blurb": "Crossing and set-piece delivery.",
+   "trains": [
+    {
+     "id": "crossing",
+     "w": 1
+    },
+    {
+     "id": "technique",
+     "w": 0.6
+    },
+    {
+     "id": "passing",
+     "w": 0.4
+    }
+   ]
+  },
+  {
+   "id": "defensiveShape",
+   "label": "Defensive shape",
+   "blurb": "Holding a line and staying switched on.",
+   "trains": [
+    {
+     "id": "positioning",
+     "w": 1
+    },
+    {
+     "id": "marking",
+     "w": 0.6
+    },
+    {
+     "id": "concentration",
+     "w": 0.4
+    }
+   ]
+  },
+  {
+   "id": "tackling",
+   "label": "Tackling and duels",
+   "blurb": "Winning the ball and winning duels.",
+   "trains": [
+    {
+     "id": "tackling",
+     "w": 1
+    },
+    {
+     "id": "aggression",
+     "w": 0.6
+    },
+    {
+     "id": "strength",
+     "w": 0.4
+    }
+   ]
+  },
+  {
+   "id": "aerial",
+   "label": "Aerial work",
+   "blurb": "Heading and timing the jump.",
+   "trains": [
+    {
+     "id": "heading",
+     "w": 1
+    },
+    {
+     "id": "jumping",
+     "w": 0.6
+    },
+    {
+     "id": "strength",
+     "w": 0.4
+    }
+   ]
+  },
+  {
+   "id": "movement",
+   "label": "Movement",
+   "blurb": "Runs off the ball and reading the play.",
+   "trains": [
+    {
+     "id": "offTheBall",
+     "w": 1
+    },
+    {
+     "id": "anticipation",
+     "w": 0.6
+    },
+    {
+     "id": "acceleration",
+     "w": 0.4
+    }
+   ]
+  },
+  {
+   "id": "speed",
+   "label": "Speed and agility",
+   "blurb": "Sprint mechanics and changes of direction.",
+   "trains": [
+    {
+     "id": "pace",
+     "w": 1
+    },
+    {
+     "id": "acceleration",
+     "w": 0.6
+    },
+    {
+     "id": "agility",
+     "w": 0.4
+    }
+   ]
+  },
+  {
+   "id": "strength",
+   "label": "Strength and balance",
+   "blurb": "Gym work and core stability.",
+   "trains": [
+    {
+     "id": "strength",
+     "w": 1
+    },
+    {
+     "id": "balance",
+     "w": 0.6
+    },
+    {
+     "id": "jumping",
+     "w": 0.4
+    }
+   ]
+  },
+  {
+   "id": "endurance",
+   "label": "Endurance",
+   "blurb": "Running volume and recovery between efforts.",
+   "trains": [
+    {
+     "id": "stamina",
+     "w": 1
+    },
+    {
+     "id": "workRate",
+     "w": 0.6
+    }
+   ]
+  },
+  {
+   "id": "video",
+   "label": "Video analysis",
+   "blurb": "Studying opponents and your own decisions.",
+   "trains": [
+    {
+     "id": "decisions",
+     "w": 1
+    },
+    {
+     "id": "anticipation",
+     "w": 0.6
+    },
+    {
+     "id": "vision",
+     "w": 0.4
+    }
+   ]
+  },
+  {
+   "id": "mindset",
+   "label": "Mindset",
+   "blurb": "Concentration and staying calm when it matters.",
+   "trains": [
+    {
+     "id": "composure",
+     "w": 1
+    },
+    {
+     "id": "concentration",
+     "w": 0.6
+    }
+   ]
+  },
+  {
+   "id": "gkHandling",
+   "label": "Keeper: handling",
+   "blurb": "Catching, command of the area and one on ones.",
+   "trains": [
+    {
+     "id": "handling",
+     "w": 1
+    },
+    {
+     "id": "commandOfArea",
+     "w": 0.6
+    },
+    {
+     "id": "oneOnOnes",
+     "w": 0.4
+    }
+   ]
+  },
+  {
+   "id": "gkReflexes",
+   "label": "Keeper: reflexes",
+   "blurb": "Shot stopping, reach and distribution.",
+   "trains": [
+    {
+     "id": "reflexes",
+     "w": 1
+    },
+    {
+     "id": "aerialReach",
+     "w": 0.6
+    },
+    {
+     "id": "kicking",
+     "w": 0.4
+    }
+   ]
+  },
+  {
+   "id": "skillWork",
+   "label": "Skill work",
+   "blurb": "Learn a trait. Pick one in the trait panel. It needs the right attributes first.",
+   "trains": [
+    {
+     "id": "technique",
+     "w": 1
+    },
+    {
+     "id": "firstTouch",
+     "w": 0.6
+    }
+   ]
+  },
+  {
+   "id": "smallSided",
+   "label": "Small-sided games",
+   "blurb": "Broad work that touches many skills, lightly.",
+   "trains": [
+    {
+     "id": "passing",
+     "w": 1
+    },
+    {
+     "id": "firstTouch",
+     "w": 0.6
+    },
+    {
+     "id": "decisions",
+     "w": 0.4
+    },
+    {
+     "id": "stamina",
+     "w": 0.3
+    },
+    {
+     "id": "workRate",
+     "w": 0.3
+    }
+   ]
+  }
+ ],
+ "intensities": [
+  {
+   "id": "light",
+   "label": "Light",
+   "gain": 0.65,
+   "cost": 1.5,
+   "risk": "Low"
+  },
+  {
+   "id": "standard",
+   "label": "Standard",
+   "gain": 1,
+   "cost": 3,
+   "risk": "Normal"
+  },
+  {
+   "id": "hard",
+   "label": "Hard",
+   "gain": 1.4,
+   "cost": 6,
+   "risk": "Raised"
+  }
+ ],
+ "byPosition": {
+  "GK": [
+   "gkHandling",
+   "gkReflexes",
+   "mindset"
+  ],
+  "CB": [
+   "defensiveShape",
+   "tackling",
+   "aerial"
+  ],
+  "FB": [
+   "speed",
+   "defensiveShape",
+   "delivery"
+  ],
+  "DM": [
+   "tackling",
+   "passing",
+   "defensiveShape"
+  ],
+  "CM": [
+   "passing",
+   "ballMastery",
+   "endurance"
+  ],
+  "AM": [
+   "passing",
+   "ballMastery",
+   "finishing"
+  ],
+  "W": [
+   "speed",
+   "ballMastery",
+   "delivery"
+  ],
+  "ST": [
+   "finishing",
+   "movement",
+   "aerial"
+  ]
+ }
+}

@@ -1,0 +1,7 @@
+import type { Rng } from './rng';
+
+export const FIRST = ['Jack', 'Harry', 'Callum', 'Kieran', 'Jamal', 'Tom', 'Ollie', 'Luca', 'Mateo', 'Kofi', 'Dan', 'Ryan', 'Ben', 'Sam', 'Joe', 'Rhys', 'Owen', 'Ethan', 'Leon', 'Marcus', 'Tyrese', 'Aaron', 'Connor', 'Declan', 'Finn', 'Jordan', 'Kai', 'Reece', 'Theo', 'Zak', 'Ibrahima', 'Joao', 'Nico', 'Andrej', 'Sven', 'Emeka', 'Yusuf', 'Liam', 'Alfie', 'Archie', 'Billy', 'Charlie', 'Ellis', 'Femi', 'Harvey', 'Isaac', 'Jude', 'Kian', 'Louie', 'Max', 'Noah', 'Oscar', 'Rory', 'Seb', 'Toby', 'Will', 'Ade', 'Bruno', 'Dario', 'Hamza'];
+
+export const LAST = ['Ashby', 'Barker', 'Bennett', 'Boateng', 'Bradley', 'Carter', 'Chambers', 'Clarke', 'Collins', 'Cooper', 'Crane', 'Dawson', 'Doyle', 'Eze', 'Fairbanks', 'Fletcher', 'Foster', 'Gallagher', 'Graham', 'Hale', 'Harding', 'Hayes', 'Holt', 'Hughes', 'Ince', 'Jarvis', 'Kerr', 'Lambert', 'Lowe', 'Lyle', 'Madden', 'Marsh', 'Mensah', 'Morley', 'Nash', 'Norris', 'Okafor', 'Osei', 'Parry', 'Pike', 'Quinn', 'Rahman', 'Reid', 'Rowe', 'Sadler', 'Shaw', 'Silva', 'Stokes', 'Sutton', 'Tait', 'Thorne', 'Turner', 'Vance', 'Walsh', 'Ward', 'Webb', 'Whelan', 'Yates', 'Adeyemi', 'Bauer', 'Costa', 'Dvorak', 'Esposito', 'Ito', 'Jensen', 'Kowalski', 'Larsen', 'Moreau', 'Novak', 'Okoye', 'Petrov', 'Rossi', 'Santos', 'Toure', 'Varga', 'Ziegler', 'Brennan', 'Cullen', 'Dunne', 'Egan', 'Flynn', 'Gray', 'Irwin', 'Kenny', 'Lennon', 'Moran', 'Nolan', "O'Hara", 'Power', 'Regan', 'Sheehan', 'Tobin'];
+
+export const randomName = (rng: Rng) => `${rng.pick(FIRST)} ${rng.pick(LAST)}`;

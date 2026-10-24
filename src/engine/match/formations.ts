@@ -1,0 +1,12 @@
+import type { Position } from '../positions';
+import type { FormationId } from './types';
+
+// Eleven slots per formation, goalkeeper first. Wide midfielders count as W, wing backs as FB.
+export const FORMATIONS: Record<FormationId, Position[]> = {
+  '4-4-2': ['GK', 'FB', 'CB', 'CB', 'FB', 'W', 'CM', 'CM', 'W', 'ST', 'ST'],
+  '4-3-3': ['GK', 'FB', 'CB', 'CB', 'FB', 'DM', 'CM', 'CM', 'W', 'ST', 'W'],
+  '4-2-3-1': ['GK', 'FB', 'CB', 'CB', 'FB', 'DM', 'DM', 'W', 'AM', 'W', 'ST'],
+  '3-5-2': ['GK', 'CB', 'CB', 'CB', 'FB', 'DM', 'CM', 'CM', 'FB', 'ST', 'ST'],
+  '4-1-4-1': ['GK', 'FB', 'CB', 'CB', 'FB', 'DM', 'W', 'CM', 'CM', 'W', 'ST'],
+};
+export const FORMATION_IDS = Object.keys(FORMATIONS) as FormationId[];

@@ -1,0 +1,135 @@
+{
+ "weeks": 38,
+ "divisions": [
+  {
+   "id": 1,
+   "name": "Crown League",
+   "rating": [
+    71,
+    83
+   ]
+  },
+  {
+   "id": 2,
+   "name": "Crown Division One",
+   "rating": [
+    62,
+    71
+   ]
+  },
+  {
+   "id": 3,
+   "name": "Crown Division Two",
+   "rating": [
+    54,
+    62
+   ]
+  },
+  {
+   "id": 4,
+   "name": "Crown Division Three",
+   "rating": [
+    46,
+    54
+   ]
+  }
+ ],
+ "cupRounds": [
+  {
+   "name": "Preliminary round",
+   "after": 4
+  },
+  {
+   "name": "First round",
+   "after": 9
+  },
+  {
+   "name": "Second round",
+   "after": 14
+  },
+  {
+   "name": "Round of 16",
+   "after": 20
+  },
+  {
+   "name": "Quarter-final",
+   "after": 26
+  },
+  {
+   "name": "Semi-final",
+   "after": 31
+  },
+  {
+   "name": "Final",
+   "after": 37
+  }
+ ],
+ "intlWeeks": [
+  12,
+  24,
+  33
+ ],
+ "tournamentEvery": 4,
+ "nations": [
+  {
+   "name": "Valdoria",
+   "offset": 3
+  },
+  {
+   "name": "Estravia",
+   "offset": 2
+  },
+  {
+   "name": "Norvik",
+   "offset": 1
+  },
+  {
+   "name": "Casteria",
+   "offset": 0
+  },
+  {
+   "name": "Brannock",
+   "offset": 0
+  },
+  {
+   "name": "Ostmark",
+   "offset": -1
+  },
+  {
+   "name": "Lusitane",
+   "offset": -2
+  },
+  {
+   "name": "Veridia",
+   "offset": -2
+  },
+  {
+   "name": "Karsovia",
+   "offset": -3
+  },
+  {
+   "name": "Adriano",
+   "offset": -4
+  },
+  {
+   "name": "Tallin Isles",
+   "offset": -5
+  },
+  {
+   "name": "Merrow",
+   "offset": -6
+  },
+  {
+   "name": "Qasrin",
+   "offset": -7
+  },
+  {
+   "name": "Dunmere",
+   "offset": -8
+  },
+  {
+   "name": "Port Lysander",
+   "offset": -9
+  }
+ ]
+}

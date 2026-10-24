@@ -1,0 +1,11 @@
+node_modules
+dist
+dist-single
+ios/App/build
+ios/App/Pods
+ios/DerivedData
+squad-number-app.zip
+.claude/
+.DS_Store
+*.zip
+*.log

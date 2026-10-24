@@ -1,0 +1,182 @@
+{
+ "groups": [
+  {
+   "id": "technical",
+   "label": "Technical"
+  },
+  {
+   "id": "mental",
+   "label": "Mental"
+  },
+  {
+   "id": "physical",
+   "label": "Physical"
+  },
+  {
+   "id": "goalkeeping",
+   "label": "Goalkeeping"
+  }
+ ],
+ "attributes": [
+  {
+   "id": "finishing",
+   "label": "Finishing",
+   "group": "technical"
+  },
+  {
+   "id": "longShots",
+   "label": "Long Shots",
+   "group": "technical"
+  },
+  {
+   "id": "passing",
+   "label": "Passing",
+   "group": "technical"
+  },
+  {
+   "id": "firstTouch",
+   "label": "First Touch",
+   "group": "technical"
+  },
+  {
+   "id": "dribbling",
+   "label": "Dribbling",
+   "group": "technical"
+  },
+  {
+   "id": "crossing",
+   "label": "Crossing",
+   "group": "technical"
+  },
+  {
+   "id": "heading",
+   "label": "Heading",
+   "group": "technical"
+  },
+  {
+   "id": "tackling",
+   "label": "Tackling",
+   "group": "technical"
+  },
+  {
+   "id": "marking",
+   "label": "Marking",
+   "group": "technical"
+  },
+  {
+   "id": "technique",
+   "label": "Technique",
+   "group": "technical"
+  },
+  {
+   "id": "composure",
+   "label": "Composure",
+   "group": "mental"
+  },
+  {
+   "id": "vision",
+   "label": "Vision",
+   "group": "mental"
+  },
+  {
+   "id": "decisions",
+   "label": "Decisions",
+   "group": "mental"
+  },
+  {
+   "id": "positioning",
+   "label": "Positioning",
+   "group": "mental"
+  },
+  {
+   "id": "offTheBall",
+   "label": "Off the Ball",
+   "group": "mental"
+  },
+  {
+   "id": "anticipation",
+   "label": "Anticipation",
+   "group": "mental"
+  },
+  {
+   "id": "workRate",
+   "label": "Work Rate",
+   "group": "mental"
+  },
+  {
+   "id": "aggression",
+   "label": "Aggression",
+   "group": "mental"
+  },
+  {
+   "id": "concentration",
+   "label": "Concentration",
+   "group": "mental"
+  },
+  {
+   "id": "pace",
+   "label": "Pace",
+   "group": "physical"
+  },
+  {
+   "id": "acceleration",
+   "label": "Acceleration",
+   "group": "physical"
+  },
+  {
+   "id": "stamina",
+   "label": "Stamina",
+   "group": "physical"
+  },
+  {
+   "id": "strength",
+   "label": "Strength",
+   "group": "physical"
+  },
+  {
+   "id": "agility",
+   "label": "Agility",
+   "group": "physical"
+  },
+  {
+   "id": "balance",
+   "label": "Balance",
+   "group": "physical"
+  },
+  {
+   "id": "jumping",
+   "label": "Jumping",
+   "group": "physical"
+  },
+  {
+   "id": "handling",
+   "label": "Handling",
+   "group": "goalkeeping"
+  },
+  {
+   "id": "reflexes",
+   "label": "Reflexes",
+   "group": "goalkeeping"
+  },
+  {
+   "id": "aerialReach",
+   "label": "Aerial Reach",
+   "group": "goalkeeping"
+  },
+  {
+   "id": "commandOfArea",
+   "label": "Command of Area",
+   "group": "goalkeeping"
+  },
+  {
+   "id": "kicking",
+   "label": "Kicking",
+   "group": "goalkeeping"
+  },
+  {
+   "id": "oneOnOnes",
+   "label": "One on Ones",
+   "group": "goalkeeping"
+  }
+ ]
+}

@@ -1,0 +1,227 @@
+[
+ {
+  "id": "debut",
+  "label": "Professional debut",
+  "desc": "Play a league match.",
+  "when": "match",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "firstStart",
+  "label": "In from the start",
+  "desc": "Start a league match.",
+  "when": "match",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "firstGoal",
+  "label": "Off the mark",
+  "desc": "Score a league goal.",
+  "when": "match",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "firstAssist",
+  "label": "The final ball",
+  "desc": "Set up a league goal.",
+  "when": "match",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "brace",
+  "label": "A brace",
+  "desc": "Score twice in a match.",
+  "when": "match",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "hatTrick",
+  "label": "Hat-trick",
+  "desc": "Score three in a match.",
+  "when": "match",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "motm",
+  "label": "Player of the match",
+  "desc": "Be the best player on the pitch.",
+  "when": "match",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "perfect",
+  "label": "Near perfect",
+  "desc": "Rate 9.0 or better in a match.",
+  "when": "match",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "sentOff",
+  "label": "Early bath",
+  "desc": "Get sent off.",
+  "when": "match",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "cupFinalGoal",
+  "label": "Cup final scorer",
+  "desc": "Score in the cup final.",
+  "when": "match",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "tenGoals",
+  "label": "Ten in a season",
+  "desc": "Score ten league goals in a season.",
+  "when": "season",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "twentyGoals",
+  "label": "Twenty in a season",
+  "desc": "Score twenty league goals in a season.",
+  "when": "season",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "hundredApps",
+  "label": "Centurion",
+  "desc": "Make 100 league appearances.",
+  "when": "season",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "hundredGoals",
+  "label": "Century of goals",
+  "desc": "Score 100 league goals.",
+  "when": "season",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "ironman",
+  "label": "Ever present",
+  "desc": "Start 36 or more league matches in a season.",
+  "when": "season",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "promoted",
+  "label": "Going up",
+  "desc": "Win promotion.",
+  "when": "season",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "champion",
+  "label": "Champion",
+  "desc": "Win the league.",
+  "when": "season",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "cupWinner",
+  "label": "Cup winner",
+  "desc": "Win the Crown Cup.",
+  "when": "season",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "topFlight",
+  "label": "Top flight",
+  "desc": "Play in the Crown League.",
+  "when": "season",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "premier",
+  "label": "Premier level",
+  "desc": "Reach an overall of 80.",
+  "when": "season",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "worldClass",
+  "label": "World class",
+  "desc": "Reach an overall of 90.",
+  "when": "season",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "firstCap",
+  "label": "Capped",
+  "desc": "Play for the senior national team.",
+  "when": "season",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "twentyFiveCaps",
+  "label": "25 caps",
+  "desc": "Win 25 senior caps.",
+  "when": "season",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "tournament",
+  "label": "Continental winner",
+  "desc": "Win the Continental Championship.",
+  "when": "season",
+  "check": {
+   "$fn": true
+  }
+ },
+ {
+  "id": "target",
+  "label": "Hitting targets",
+  "desc": "Meet all three of your agent's targets in a season.",
+  "when": "season",
+  "check": {
+   "$fn": true
+  }
+ }
+]
