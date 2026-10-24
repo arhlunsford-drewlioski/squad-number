@@ -14,7 +14,21 @@ npm run dev:phone
 
 Open the `Network` address it prints (for example `http://192.168.4.140:5173`) in Safari on the phone. Every save in the code refreshes the phone within a second. This is the loop for screens, layout and balance. It is plain `http`, so it cannot be installed or run offline, and careers saved here are separate from the installed app's.
 
-**2. The installed app, from an https address.**
+**2. The installed app, from GitHub Pages (set up).**
+
+The game is published at **https://arhlunsford-drewlioski.github.io/squad-number/**. Pushing to the `main` branch of `github.com/arhlunsford-drewlioski/squad-number` builds it and publishes it automatically (`.github/workflows/pages.yml`, about a minute):
+
+```bash
+git add -A
+git commit -m "What changed"
+git push
+```
+
+Watch it with `gh run watch`, or in the repository's Actions tab. A failed run sends an email. The installed app picks the new version up the next time it is opened online and shows the Reload banner.
+
+Notes: GitHub caches pages for about ten minutes, so a very fresh release can take that long to show up. The repository is public, which is what lets Pages host it for free; the source is readable by anyone.
+
+**Other hosts.** The built app is a folder of static files (`dist/`), so any static host works. One-time set up with Netlify:
 
 The built app is a folder of static files (`dist/`). Put it on any static host and open that address on the phone. One-time set up with Netlify:
 
